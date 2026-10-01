@@ -52,13 +52,13 @@ def deletar_tudo():
     visor.config(state=tk.DISABLED)
 
 def deletar_ultimo_numero():
-    visor.config(state=tk.NORMAL)
-    ultimo=len(visor.get())-1
-    visor.delete(ultimo,tk.END)
-
     global numero1
     global numero2
     global operacao
+
+    visor.config(state=tk.NORMAL)
+    ultimo=len(visor.get())-1
+    visor.delete(ultimo,tk.END)
 
     visor.config(state=tk.DISABLED)
 
@@ -90,8 +90,8 @@ def resultado(x,y):
         visor.insert(tk.END,str(resultado))
 
     numero1=resultado
+    operacao =''
     numero2=''
-    operacao=''
 
 
     visor.config(state=tk.DISABLED)
